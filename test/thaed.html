@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="table">
+
+    </div>
+    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script>
+        table = document.createElement("table");
+        thead = document.createElement("thead");
+        tr = document.createElement("tr");
+        th_array = ['نوع المكتب', 'اسم المكتب', 'الكود المالى', 'الكود البريدى', 'كود بوستال', 'تليفون', 'العنوان', ''];
+        $.each(th_array, function (key, val) {
+            th = document.createElement("th");
+            th.innerText = val;
+            tr.appendChild(th);
+        });
+        thead.appendChild(tr);
+        table.appendChild(thead);
+        document.getElementById('table').appendChild(table);
+
+        thead.appendChild(tr);
+        table.appendChild(thead);
+    </script>
+</body>
+
+</html>
