@@ -17,7 +17,7 @@ include '../conn/conn.php';
     <!-- <link rel="stylesheet" href="../assets/DataTables/DataTables-1.12.1/css/dataTables.bootstrap5.css"> -->
     <!-- <link rel="stylesheet" href="../assets/DataTables/Select-1.4.0/css/select.dataTables.min.css"> -->
     <!-- <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
-    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/style2.css"> -->
     <link rel="stylesheet" href="../assets/css/m.css">
   <style>
 table {
@@ -116,7 +116,7 @@ border: 1px solid
             </table>
         </div>
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.js"></script>

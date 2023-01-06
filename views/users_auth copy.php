@@ -7,8 +7,8 @@
     <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
         /* */
@@ -346,10 +346,10 @@
         </div>
 
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.js"></script>

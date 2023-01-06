@@ -11,10 +11,10 @@ session_login_auth('move');
       <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/plugins/easy-autocomplete.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
+    <!-- <link rel="stylesheet" href="../assets/css/all.css"> -->
     <style>
         /* */ 
         fieldset {
@@ -64,15 +64,15 @@ session_login_auth('move');
 </head>
 
 <body>
-    <div class="pcoded-navbar navbar-collapsed">
+    <nav class="pcoded-navbar navbar-collapsed">
         <?php include '..\layout\aside\nav.php';?>
-    </div>
+    </nav>
     <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
         <?php include '..\layout\header\m-hader.html';?>
         <ul class="navbar-nav ">
 
         </ul>
-        <ul class="navbar-nav  ms-auto">
+        <ul class="navbar-nav  ml-auto">
             <li>
                 <?php include '..\layout\header\user.php';?>
             </li>
@@ -247,11 +247,10 @@ session_login_auth('move');
         <?php include("../component/modals/user_password_change.php") ?>
 
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/jquery.easy-autocomplete.js"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.js"></script>

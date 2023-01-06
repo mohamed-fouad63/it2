@@ -2,24 +2,18 @@ body {
   direction: rtl;
   text-align: right;
 }
+.ml-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
 .pcoded-header .navbar-nav {
   padding-right: 0;
-}
-
-.pcoded-header .navbar-nav > li:first-child {
-  /* padding-right: 25px;
-  padding-left: 12px; */
 }
 
 .pcoded-header .navbar-nav > li:last-child {
   padding-left: 30px;
   padding-right: 12px;
 }
-.pcoded-header .m-header .mobile-menu {
-  left: auto;
-  right: 0;
-}
-
 @media only screen and (min-width: 992px) {
   .pcoded-header .m-header .mobile-menu {
     right: auto;
@@ -30,11 +24,6 @@ body {
 .pcoded-header .m-header .mob-toggler {
   right: auto;
   left: 0;
-}
-.pcoded-navbar {
-  /* direction: rtl;
-  text-align: right; */
-  /* border-radius: 6px 0 0 0; */
 }
 
 .pcoded-navbar ul {
@@ -71,9 +60,6 @@ body {
   margin-left: auto;
   margin-right: 70px;
 }
-.pcoded-navbar.navbar-collapsed .pcoded-inner-navbar {
-  direction: ltr;
-}
 
 .pcoded-navbar.navbar-collapsed
   .pcoded-inner-navbar
@@ -102,6 +88,10 @@ body {
 .pcoded-main-container {
   margin-left: 0;
   margin-right: 235px;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  margin-top: 10px;
 }
 .ps--active-x > .ps__rail-x,
 .ps--active-y > .ps__rail-y {

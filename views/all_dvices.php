@@ -9,13 +9,10 @@ session_login_auth('all_dvices');
     <meta charset=utf-8>
     <title>اجهزه كل المكاتب</title>
     <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="../assets/css/plugins/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="../assets/DataTables/DataTables-1.12.1/css/dataTables.bootstrap5.css"> -->
-    <!-- <link rel="stylesheet" href="../assets/DataTables/Select-1.4.0/css/select.dataTables.min.css"> -->
+    <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
-    <!-- <link rel="stylesheet" href="../assets/DataTables/FixedHeader-3.2.3/css/fixedHeader.dataTables.css"> -->
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
         #main {
@@ -39,19 +36,6 @@ session_login_auth('all_dvices');
 
         .filte_div {
             width: 30rem;
-        }
-
-
-
-        th.sorting.sorting_desc:before {
-            content: "\F145";
-            font-family: 'bootstrap-icons';
-            position: relative;
-            display: block;
-            opacity: 1;
-            right: 80%;
-            line-height: 9px;
-            font-size: .9em;
         }
 
         th.sorting.sorting_asc:after {
@@ -128,8 +112,7 @@ session_login_auth('all_dvices');
     <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/jquery.easy-autocomplete.min.js"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.min.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.min.js"></script>

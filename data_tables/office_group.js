@@ -44,7 +44,7 @@ function load_post_group_tables() {
           table.appendChild(thead);
         });
         table.id = key;
-        fieldset.id = key + "fieldset";
+        // fieldset.id = key + "fieldset";
         legend.id = key + "count_office";
         span_o_n.classList.add("group_name", "me-3");
         table.classList.add("table", "table-hover", "align-middle");

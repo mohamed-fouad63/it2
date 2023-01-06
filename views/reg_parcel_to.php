@@ -13,8 +13,8 @@ $db = $_SESSION['db'];
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/plugins/easy-autocomplete.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
         #main {
@@ -96,7 +96,7 @@ $db = $_SESSION['db'];
     </div>
     <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
         <?php include '..\layout\header\m-hader.html';?>
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ml-auto">
             <li>
                 <?php include '..\layout\header\user.php';?>
             </li>
@@ -230,13 +230,13 @@ $db = $_SESSION['db'];
         <!-- end user password modal -->
     </div>
 
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/jquery.easy-autocomplete.js"></script>
+    <script src="../assets/js/plugins/jquery.easy-autocomplete.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/plugins/masking-input.js" data-autoinit="true"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../data_tables/reg_parcel_to.js"></script>
     <script src="../js/reg_parcel_to/add_reg_parcel_to.js"></script>

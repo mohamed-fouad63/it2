@@ -11,8 +11,8 @@ session_login_auth('office_group');
     <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
         /* */
@@ -53,10 +53,6 @@ session_login_auth('office_group');
             background-color: #8fbc8f33;
         }
 
-        tbody tr td:last-of-type button {
-            float: left
-        }
-
         .dataTables_info {
             display: inline-block
         }
@@ -74,9 +70,7 @@ session_login_auth('office_group');
     </div>
     <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
         <?php include '..\layout\header\m-hader.html';?>
-        <ul class="navbar-nav ">
-        </ul>
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ml-auto">
             <li>
                 <div class="btn-group bt_div">
                     <button class="btn" tabindex="0" aria-controls="example" data-bs-toggle="modal"
@@ -86,7 +80,7 @@ session_login_auth('office_group');
                 </div>
             </li>
         </ul>
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ml-auto">
             <li>
                 <?php include '..\layout\header\user.php';?>
             </li>
@@ -106,10 +100,10 @@ session_login_auth('office_group');
         <?php include("../component/modals/user_exit.php") ?>
         <?php include("../component/modals/user_password_change.php") ?>
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.min.js"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.js"></script>

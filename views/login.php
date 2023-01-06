@@ -145,7 +145,7 @@ if($_SESSION){
       </div>
     </div>
   </div>
-  <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+  <script src="../assets/js/plugins/jquery.min.js"></script>
   <script>
     $("form").submit(function (event) {
       event.preventDefault();

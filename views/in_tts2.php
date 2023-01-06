@@ -7,8 +7,8 @@
       <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.css">
     <link rel="stylesheet" href="../assets/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/layout-rtl2.css">
     <!-- <link rel="stylesheet" href="../assets/DataTables/FixedHeader-3.2.3/css/fixedHeader.dataTables.css"> -->
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
@@ -363,10 +363,10 @@ tbody tr td:last-of-type{
             <?php include '../component/modals/resend_to_it_modal.html'?>
         <!-- end edit modal -->
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
     <script src="../assets/js/plugins/bootstrap5/bootstrap.js"></script>
-    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script>
         var country = ["الغار", "التلين", "الميساه"];

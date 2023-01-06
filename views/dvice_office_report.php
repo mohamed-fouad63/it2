@@ -108,7 +108,7 @@ border: 1px solid
             </table>
         </div>
     </div>
-    <script src="../assets/js/plugins/jquery-3.6.0.js"></script>
+    <script src="../assets/js/plugins/jquery.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/dataTables.buttons.js"></script>
     <script src="../assets/DataTables/Buttons-2.2.3/js/buttons.html5.min.js"></script>
