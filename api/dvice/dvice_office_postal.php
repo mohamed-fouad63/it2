@@ -4,7 +4,7 @@ $db = $_SESSION['db'];
 if(!empty($_POST)){
 include_once "../../conn/conn.php";
 $input_search = $_POST['input_search'];
-$query_all_in_it = "SELECT * FROM dvice WHERE office_name = '".$input_search."' and id = 'postal' ";
+$query_all_in_it = "SELECT num,id,office_name,dvice_type,dvice_name,sn,note,note_move_to FROM dvice WHERE office_name = '".$input_search."' and id = 'postal' ";
 $result = mysqli_query($conn, $query_all_in_it);
 $row_count = mysqli_num_rows($result);
 if($row_count > 0){

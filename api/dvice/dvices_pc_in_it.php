@@ -4,7 +4,7 @@ $db = $_SESSION['db'];
 if(!empty($_GET)){
 include_once "../../conn/conn.php";
 $dvice_id = $_GET['dvice_id'];
-$query_all_in_it = 'SELECT * FROM in_it WHERE status= "in_it" AND id = "'.$dvice_id.'"';
+$query_all_in_it = 'SELECT count_in_it,num,office_name,dvice_type,dvice_name,sn,damage,in_it_note,parcel_in_it,date_in_it FROM in_it WHERE status= "in_it" AND id = "'.$dvice_id.'"';
 $result = mysqli_query($conn, $query_all_in_it);
 
 $row_count = mysqli_num_rows($result);

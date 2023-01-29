@@ -3,7 +3,7 @@ session_start();
 $db = $_SESSION['db'];
 if($_SESSION['deleted_dvices'] AND !empty($_POST)){
 include_once "../../conn/conn.php";
-$query_all_in_it = 'SELECT * FROM in_it WHERE status = "deleted"';
+$query_all_in_it = 'SELECT office_name,dvice_name,sn,deleted_parcel,data_deleted FROM in_it WHERE status = "deleted"';
 $result = mysqli_query($conn, $query_all_in_it);
 
 $row_count = mysqli_num_rows($result);
@@ -18,7 +18,7 @@ while($row_pc=mysqli_fetch_assoc($result)){
 else {
     echo json_encode(array('message' => 'no datas found'));
 }
-                        } else {
+} else {
      header('location:../../views');
 }
 ?>

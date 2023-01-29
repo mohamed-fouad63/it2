@@ -195,6 +195,7 @@ h5 {
 
 .pcoded-navbar .pcoded-inner-navbar li {
   position: relative;
+  /* direction: rtl; */
 }
 
 .pcoded-navbar .pcoded-inner-navbar li > a {
@@ -370,6 +371,10 @@ h5 {
 .pcoded-navbar.navbar-collapsed:hover {
   width: 235px !important;
 }
+
+.pcoded-navbar.navbar-collapsed:hover .pcoded-inner-navbar > li > a {
+  direction: rtl;
+}
 .pcoded-navbar.navbar-collapsed:hover
   .pcoded-inner-navbar
   > li
@@ -377,6 +382,7 @@ h5 {
   > .pcoded-mtext {
   transform: rotateY(0deg);
   opacity: 1;
+  direction: rtl;
 }
 
 .pcoded-navbar.navbar-collapsed:hover

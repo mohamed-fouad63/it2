@@ -10,7 +10,7 @@
                             <input type="number" min="1000" class="form-control text-start me-3" id="edit_user_id"
                                 readonly>
                             <span class="input-group-text  col-sm-2" id="">اسم المستخدم</span>
-                            <input type="text" class="form-control " id="edit_user_name" readonly>
+                            <input type="text" class="form-control " id="edit_user_name">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text col-sm-2" id="">الوظيفه</span>
@@ -23,11 +23,6 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <div class="form-check flex-grow-1">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">ابقاء النافذه مفتوحه</label>
-                            <input class="form-check-input" type="checkbox" value="" id="chk_btn"
-                                onclick="dismiss_modal_check()">
-                        </div>
                         <button type="button" class="btn btn-teal" data-bs-dismiss="modal">الغاء</button>
                         <button type="button" class="btn btn-success" data-bs-dismiss="modal"
                             id="add_dvice_btn">تعديل</button>

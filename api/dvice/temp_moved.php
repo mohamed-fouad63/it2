@@ -3,7 +3,7 @@ session_start();
 $db = $_SESSION['db'];
 if(!empty($_GET)){
 $dvice_id = $_GET['dvice_id'];
-$query_all_in_it = "SELECT * FROM dvice WHERE dvice.id = '$dvice_id' AND dvice.note_move_to != ''";
+$query_all_in_it = "SELECT num,dvice_name,sn,office_name,note_move_to FROM dvice WHERE dvice.id = '$dvice_id' AND dvice.note_move_to != ''";
 include_once "../../conn/conn.php";
 $result = mysqli_query($conn, $query_all_in_it);
 $row_count = mysqli_num_rows($result);

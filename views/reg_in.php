@@ -86,6 +86,9 @@ $db = $_SESSION['db'];
         #czcMask {
             display: none
         }
+        .easy-autocomplete {
+            width:100%
+        }
     </style>
 </head>
 

@@ -56,6 +56,9 @@ session_login_auth('post');
         .dataTables_info {
             display: inline-block
         }
+        .easy-autocomplete {
+            width:100%
+        }
     </style>
 </head>
 

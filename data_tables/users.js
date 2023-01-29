@@ -23,6 +23,9 @@ function load_users_tables() {
         <button type="button" class="btn btn-info me-2" id="user_reset_password_${row.id}" title="استعاده كلمه المرور">
           استعاده كلمه المرور
         </button>
+        <button type="button" class="btn btn-success me-2 user_edit" id="user_edit_${row.id}" title="تعديل" data-bs-toggle="modal" data-placement="right" data-bs-target="#Edit_USER_Modal">
+            تعديل
+        </button>
         </div>
         `;
         },
@@ -40,13 +43,13 @@ function load_users_tables() {
     rowCallback: function (row, data) {},
     createdRow: function (row, data, dataIndex) {},
     initComplete: function () {
-      // $("#users_table tbody").on("click", ".user_edit", function () {
-      //   var tr = $(this).closest("tr");
-      //   var row = users_table.row(tr);
-      //   $("#edit_user_id").val(row.data().id);
-      //   $("#edit_user_name").val(row.data().first_name);
-      //   $("#edit_user_job").val(row.data().job);
-      // });
+      $("#users_table tbody").on("click", ".user_edit", function () {
+        var tr = $(this).closest("tr");
+        var row = users_table.row(tr);
+        $("#edit_user_id").val(row.data().id);
+        $("#edit_user_name").val(row.data().first_name);
+        $("#edit_user_job").val(row.data().job);
+      });
       // $("#users_table tbody").on("click", ".btn-info", function () {
       //   var tr = $(this).closest("tr");
       //   var row = users_table.row(tr);
@@ -191,8 +194,8 @@ function format(d) {
 <input type="checkbox" class="btn-check" ${notice} value="notice" id="record3${d.id}" autocomplete="off">
 <label class="btn btn-outline-success mb-1" for="record3${d.id}">سجل البلاغات</label>
 
-<input type="checkbox" class="btn-check" ${deleted_dvices} value="deleted_dvices" id="record3${d.id}" autocomplete="off">
-<label class="btn btn-outline-success mb-1" for="record3${d.id}">سجل استنزال العهد</label>
+<input type="checkbox" class="btn-check" ${deleted_dvices} value="deleted_dvices" id="record4${d.id}" autocomplete="off">
+<label class="btn btn-outline-success mb-1" for="record4${d.id}">سجل استنزال العهد</label>
 
 
 <input type="checkbox" class="btn-check" ${all_misin} value="all_misin" id="all_misin${d.id}" autocomplete="off">

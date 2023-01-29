@@ -92,11 +92,12 @@ border: 1px solid
                         <th rowspan='2'>عدد الاجهزه</th>
                         <th rowspan='2'>عدد الشاشات</th>
                         <th rowspan='2'>عدد الطابعات</th>
-                        <th colspan='3'>عدد ماكينات نقاط البيع</th>
+                        <th colspan='4'>عدد ماكينات نقاط البيع</th>
                         <th colspan='4'>عدد اجهزه بوستال</th>
                     </tr>
                     <tr class="">
                         <th>E-FINANCE</th>
+                        <th>VX510</th>
                         <th>V200T</th>
                         <th>BITEL</th>
                         <th>قارئ باركود</th>

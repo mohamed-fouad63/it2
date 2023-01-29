@@ -9,5 +9,7 @@
   { "office_type": "مكتب سفريات" },
   { "office_type": "مركز حركه" },
   { "office_type": "مباحث البريد" },
-  { "office_type": "مكتب حركه" }
+  { "office_type": "مكتب حركه" },
+  { "office_type": "إداره عامه"},
+  { "office_type": "جهه خارجيه"}
 ]

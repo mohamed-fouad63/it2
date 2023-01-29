@@ -80,7 +80,6 @@ var table = $("#example").DataTable({
       $(row).css("color", "red");
     }
   },
-  order: [[2, "asc"]],
   ordering: false,
   dom: "Brti",
   paging: false,
@@ -97,7 +96,7 @@ var table = $("#example").DataTable({
           $("#month_missin").val()
         );
       },
-      autoPrint: false,
+      autoPrint: true,
       exportOptions: { columns: [1, 2, 3, 4, 5, 6] },
     },
   ],

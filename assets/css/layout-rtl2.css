@@ -29,6 +29,7 @@ body {
 .pcoded-navbar ul {
   padding-left: 0;
   padding-right: 0;
+  direction: ltr;
 }
 .pcoded-navbar .pcoded-inner-navbar li > a {
   text-align: right;

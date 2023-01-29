@@ -471,4 +471,3 @@ if ($nameOfDay == "الجمعه") {
     </body>
 
     </html>
-    <?php

@@ -52,7 +52,7 @@ $query_all_in_it = "SELECT id,does,counter,it_name,misin_day,misin_date,office_n
 where id = '{$getid}' and misin_date = '{$day}'
 UNION ALL
 SELECT id,does,counter,it_name,misin_day,misin_date,office_name,misin_type,start_time,end_time,mission_table FROM misin_it_online
-where id = '{$getid}' and misin_date = '{$day}' ";
+where id = '{$getid}' and misin_date = '{$day}' ORDER BY start_time ASC ";
 $result = mysqli_query($conn, $query_all_in_it);
 // $query_all_in_it2 = 'SELECT it_name,misin_day,misin_date,office_name,misin_type,start_time,end_time,mission_table FROM misin_it_online WHERE id = "'.$getid.'" AND misin_date LIKE "%'.$day.'%" ';
 // $result2 = mysqli_query($conn, $query_all_in_it2);

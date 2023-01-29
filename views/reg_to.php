@@ -87,7 +87,9 @@ select * {
 #czcMask {
     display:none
 }
-
+.easy-autocomplete {
+            width:100%
+        }
 </style>
 </head>
 

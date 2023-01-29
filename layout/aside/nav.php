@@ -142,6 +142,9 @@
                     <?php if($_SESSION['users'] == 1){?>
                     <li><a href="/it2/views/users_auth.php">صلاحيات المستخدمين</a></li>
                     <?php } ?>
+                    <?php if($_SESSION['db'] == "g_shrkia"){?>
+                    <li><a href="/it2/views/services_users.php">مستخدمين الخدمات</a></li>
+                    <?php } ?>
                 </ul>
             </li>
             <?php } ?>

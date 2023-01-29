@@ -55,7 +55,7 @@ else if ($nameOfDay == "الجمعه"){
   echo 'لا يوجد ماموريات يوم الجمعه';
 }
 
-else if($office_name == 'اجازه مرضيه' || $office_name == 'اجازه رسميه' || $office_name == 'اجازه عارضه' || $office_name == 'اجازه اعتياديه'){
+else if($office_name == 'اجازه مرضيه' || $office_name == 'اجازه رسميه' || $office_name == 'اجازه عارضه' || $office_name == 'اجازه اعتياديه' || $office_name == 'المنطقه'){
 $start_ill_date = strtotime($mission_date_start);
 $end_ill_date = strtotime($mission_date_end);
 

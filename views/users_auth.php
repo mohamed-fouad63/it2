@@ -118,6 +118,7 @@ session_login_auth('users');
             </div>
         </div>
         <?php include '../component/modals/users/add_user_modal.php'?>
+        <?php include '../component/modals/users/edit_user_modal.php'?>
         <?php include '../component/modals/user_exit.php'?>
         <?php include '../component/modals/user_password_change.php'?>
     </div>
