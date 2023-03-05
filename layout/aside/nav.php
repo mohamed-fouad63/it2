@@ -148,6 +148,16 @@
                 </ul>
             </li>
             <?php } ?>
+            <li class="nav-item pcoded-hasmenu">
+                <a href="#!" class="nav-link ">
+                    <span class="pcoded-micon"><i class="bi bi-people-fill"></i></span>
+                    <span class="pcoded-mtext">اداره ماكينات نقاط البيع</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li><a href="/it2/views/V200T.php">ماكينات V200T</a></li>
+                    <li><a href="/it2/views/BITEL.php">ماكينات BITEL</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
