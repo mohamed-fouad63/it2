@@ -1,7 +1,7 @@
 var v200t_users_report = $("#v200t_users_report").DataTable({
   bProcessing: true,
   ajax: {
-    url: "../api/services_users/v200t_users_report.php",
+    url: "../api/services_users/v200t/v200t_users_report.php",
     method: "post",
     data: function (d) {
       d.auth = "";
@@ -122,7 +122,7 @@ $("#v200t_users_report tbody").on("click", ".btn-success", function () {
   var data = v200t_users_report.row($(this).parents("tr")).data();
   console.log(data);
   $.ajax({
-    url: "../api/services_users/v200t_report_do_action.php",
+    url: "../api/services_users/v200t/v200t_report_do_action.php",
     method: "post",
     data: {
       action_date: data.action_date,
@@ -152,7 +152,7 @@ $("#v200t_users_report tbody").on("click", ".btn-danger", function () {
   var data2 = v200t_users_report.row($(this).parents("tr")).data();
   console.log(data2);
   $.ajax({
-    url: "../api/services_users/v200t_report_undo_action.php",
+    url: "../api/services_users/v200t/v200t_report_undo_action.php",
     method: "post",
     data: {
       action_date: data2.action_date,

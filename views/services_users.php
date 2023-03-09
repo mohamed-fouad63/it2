@@ -18,8 +18,9 @@ session_login_auth('all_misin');
     <link rel="stylesheet" href="../assets/css/plugins/perfect-scrollbar.css">
     <style>
         body {
-             background:unset;
+            background: unset;
         }
+
         #main {
             position: relative;
             top: 35px;
@@ -90,10 +91,10 @@ session_login_auth('all_misin');
 
 <body>
     <div class="pcoded-navbar navbar-collapsed" id="pcoded-navba">
-        <?php include '..\layout\aside\nav.php';?>
+        <?php include '..\layout\aside\nav.php'; ?>
     </div>
     <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
-        <?php include '..\layout\header\m-hader.html';?>
+        <?php include '..\layout\header\m-hader.html'; ?>
         <ul class="navbar-nav ">
             <li>
                 <div class="d-flex filte_div" role="search"></div>
@@ -101,7 +102,7 @@ session_login_auth('all_misin');
         </ul>
         <ul class="navbar-nav ml-auto">
             <li>
-                <?php include '..\layout\header\user.php';?>
+                <?php include '..\layout\header\user.php'; ?>
             </li>
         </ul>
     </header>
@@ -212,8 +213,9 @@ session_login_auth('all_misin');
                         </fieldset>
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item col-4" role="presentation">
-                                <button class="nav-link w-100  active" data-bs-toggle="pill" data-bs-target="#v200t_report"
-                                    type="button" role="tab" aria-selected="true">تقرير مستخدمين V200T</button>
+                                <button class="nav-link w-100  active" data-bs-toggle="pill"
+                                    data-bs-target="#v200t_report" type="button" role="tab" aria-selected="true">تقرير
+                                    مستخدمين V200T</button>
                             </li>
                             <li class="nav-item col-4" role="presentation">
                                 <button class="nav-link w-100 " data-bs-toggle="pill" data-bs-target="#bitel_report"
@@ -228,30 +230,31 @@ session_login_auth('all_misin');
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="v200t_report" role="tabpanel">
                                 <div id="v200t_report">
-                                <table id= "v200t_users_report" class="table align-middle table-hover" style="width:100%">
-                                <thead>
-                                    <tr id="filterboxrow">
-                                        <th>اسم المكتب</th>
-                                        <th>كود مالى</th>
-                                        <th>رقم الماكينه</th>
-                                        <th>S.N</th>
-                                        <th>صلاحية </th>
-                                        <th>رقم الملف</th>
-                                        <th>اضافه - الغاء</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>اسم المكتب</th>
-                                        <th>كود مالى</th>
-                                        <th>رقم الماكينه</th>
-                                        <th>S.N</th>
-                                        <th>صلاحية</th>
-                                        <th>رقم الملف</th>
-                                        <th>اضافه - الغاء</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                            </table>
+                                    <table id="v200t_users_report" class="table align-middle table-hover"
+                                        style="width:100%">
+                                        <thead>
+                                            <tr id="filterboxrow">
+                                                <th>اسم المكتب</th>
+                                                <th>كود مالى</th>
+                                                <th>رقم الماكينه</th>
+                                                <th>S.N</th>
+                                                <th>صلاحية </th>
+                                                <th>رقم الملف</th>
+                                                <th>اضافه - الغاء</th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <th>اسم المكتب</th>
+                                                <th>كود مالى</th>
+                                                <th>رقم الماكينه</th>
+                                                <th>S.N</th>
+                                                <th>صلاحية</th>
+                                                <th>رقم الملف</th>
+                                                <th>اضافه - الغاء</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="bitel_report" role="tabpanel">bitel report</div>
@@ -353,10 +356,10 @@ session_login_auth('all_misin');
             </div>
         </div>
         <!-- start user exit  modal -->
-        <?php include '../component/modals/user_exit.php'?>
+        <?php include '../component/modals/user_exit.php' ?>
         <!-- end user exit modal -->
         <!-- start user password  modal -->
-        <?php include '../component/modals/user_password_change.php'?>
+        <?php include '../component/modals/user_password_change.php' ?>
         <!-- end user password modal -->
     </div>
 
@@ -376,9 +379,9 @@ session_login_auth('all_misin');
     <script src="../js/tbl_user/services_users_search_live.js"></script>
     <script src="../js/tbl_user/services_users_search_office.js"></script>
     <script src="../js/log/change_password.js"></script>
-    <script src="../data_tables/services_users/user_services_auth.js"></script>
-    <script src="../data_tables/services_users/user_services_office.js"></script>
-    <script src="../data_tables/services_users/v200t_users_report.js"></script>
+    <script src="../data_tables/services_users/v200t/user_services_auth.js"></script>
+    <script src="../data_tables/services_users/v200t/user_services_office.js"></script>
+    <script src="../data_tables/services_users/v200t/v200t_users_report.js"></script>
     <script></script>
 </body>
 

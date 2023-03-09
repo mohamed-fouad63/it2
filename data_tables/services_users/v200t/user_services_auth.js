@@ -3,7 +3,7 @@
 // function get_users_v200t_table() {
 var v200t = $("#v200t").DataTable({
   ajax: {
-    url: "../api/services_users/v200t_users.php",
+    url: "../api/services_users/v200t/v200t_users.php",
     method: "post",
     data: {
       input_search: function () {
@@ -161,7 +161,7 @@ $("#v200t tbody").on("click", ".btn-success", function () {
   ) {
     $.ajax({
       type: "POST",
-      url: "../api/services_users/v200t_users_action.php",
+      url: "../api/services_users/v200t/v200t_users_action.php",
       data: formData,
       success: function (result) {
         result = result.replace(/^\s+|\s+$/gm, "");

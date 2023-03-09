@@ -4,7 +4,7 @@
 var groupColumn = 6;
 var v200t_users_office = $("#v200t_users_office").DataTable({
   ajax: {
-    url: "../api/services_users/v200t_users_office.php",
+    url: "../api/services_users/v200t/v200t_users_office.php",
     method: "post",
     data: {
       input_office_search: function () {
