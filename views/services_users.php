@@ -116,13 +116,13 @@ session_login_auth('all_misin');
             <div id="main">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item w-50" role="presentation">
-                        <button class="nav-link w-100 active" data-bs-toggle="pill" data-bs-target="#user_auth_edit"
-                            type="button" role="tab" aria-selected="true">
+                        <button class="nav-link w-100 fs-5 active" data-bs-toggle="pill"
+                            data-bs-target="#user_auth_edit" type="button" role="tab" aria-selected="true">
                             تعديل صلاحيات مستخدم
                         </button>
                     </li>
                     <li class="nav-item w-50" role="presentation">
-                        <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill"
+                        <button class="nav-link w-100 fs-5" id="pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#users_office_auth" type="button" role="tab" aria-controls="pills-profile"
                             aria-selected="false">مستخدمين مكتب</button>
                     </li>
@@ -218,12 +218,12 @@ session_login_auth('all_misin');
                         </fieldset>
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item col-6" role="presentation">
-                                <button class="nav-link w-100  active" data-bs-toggle="pill"
+                                <button class="nav-link w-100 fs-5 active" data-bs-toggle="pill"
                                     data-bs-target="#v200t_report" type="button" role="tab" aria-selected="true">تقرير
                                     مستخدمين V200T</button>
                             </li>
                             <li class="nav-item col-6" role="presentation">
-                                <button class="nav-link w-100 " data-bs-toggle="pill" data-bs-target="#bitel_report"
+                                <button class="nav-link w-100 fs-5" data-bs-toggle="pill" data-bs-target="#bitel_report"
                                     type="button" role="tab" aria-selected="false">تقرير مستخدمين بايتل</button>
                             </li>
                             <!-- <li class="nav-item col-4" role="presentation">
@@ -347,16 +347,16 @@ session_login_auth('all_misin');
                             <table id="bitel_users_office" class="table align-middle table-hover" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>office_name</th>
-                                        <th>money_code</th>
-                                        <th>sn</th>
+                                        <th>اسم المكتب</th>
+                                        <th>الكود المالى</th>
+                                        <th>السريال</th>
                                         <th>pos_terminal</th>
                                         <th>stuff_name</th>
-                                        <th>id</th>
-                                        <th>auth</th>
-                                        <th>stuff_action</th>
-                                        <th>pos_action</th>
-                                        <th>action_date</th>
+                                        <th>رقم الملف</th>
+                                        <th>الصلاحيه</th>
+                                        <th>حاله الموظف</th>
+                                        <!-- <th>موقف الماكينه</th> -->
+                                        <th>تاريخ تعديل الصلاحيه</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -370,16 +370,16 @@ session_login_auth('all_misin');
                             <table id="v200t_users_office" class="table align-middle table-hover" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>office_name</th>
-                                        <th>money_code</th>
-                                        <th>sn</th>
+                                        <th>اسم المكتب</th>
+                                        <th>الكود المالى</th>
+                                        <th>السريال</th>
                                         <th>pos_terminal</th>
                                         <th>stuff_name</th>
-                                        <th>id</th>
-                                        <th>auth</th>
-                                        <th>stuff_action</th>
-                                        <th>pos_action</th>
-                                        <th>action_date</th>
+                                        <th>رقم الملف</th>
+                                        <th>الصلاحيه</th>
+                                        <th>حاله الموظف</th>
+                                        <!-- <th>موقف الماكينه</th> -->
+                                        <th>تاريخ تعديل الصلاحيه</th>
                                     </tr>
                                 </thead>
                             </table>

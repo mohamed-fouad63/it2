@@ -1,7 +1,6 @@
 /* start data table other  */
 
 // function get_users_bitel_table() {
-var groupColumn = 6;
 var bitel_users_office = $("#bitel_users_office").DataTable({
   ajax: {
     url: "../api/services_users/bitel/bitel_users_office.php",
@@ -40,7 +39,7 @@ var bitel_users_office = $("#bitel_users_office").DataTable({
         }
       },
     },
-    { data: "pos_action" },
+    // { data: "pos_action" },
     { data: "action_date" },
   ],
   dom: "rt",
@@ -52,11 +51,11 @@ var bitel_users_office = $("#bitel_users_office").DataTable({
     infoEmpty: "0",
     info: "_TOTAL_",
   },
-  rowCallback: function (row, data) {},
-  fnDrawCallback: function () {},
-  initComplete: function (settings, json) {},
-  columnDefs: [{ visible: false, targets: groupColumn }],
-  order: [[groupColumn, "asc"]],
+  rowCallback: function (row, data) { },
+  fnDrawCallback: function () { },
+  initComplete: function (settings, json) { },
+  columnDefs: [{ visible: false, targets: '6' }],
+  order: [['6', "asc"]],
   displayLength: 25,
   drawCallback: function (settings) {
     var api = this.api();
@@ -64,7 +63,7 @@ var bitel_users_office = $("#bitel_users_office").DataTable({
     var last = null;
 
     api
-      .column(groupColumn, { page: "current" })
+      .column('6', { page: "current" })
       .data()
       .each(function (group, i) {
         if (last !== group) {
