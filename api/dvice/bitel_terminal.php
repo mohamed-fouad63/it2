@@ -3,13 +3,9 @@ session_start();
 $db = $_SESSION['db'];
 // if($_SESSION['add_dvice']){
 //    $office_name = "10039";
+$office_name = $_POST['office_name'];
 include_once "../../conn/conn.php";
-$query_all_in_it = "
-SELECT d.office_name,d.dvice_name,d.sn,d.pos_terminal,d.pos_merchant,d.stuff_pos,a.money_code 
-FROM dvice as d INNER JOIN all1 as a
-ON d.office_name = a.office_name
-WHERE d.dvice_name LIKE 'VERIFONE V200T%';
-
+$query_all_in_it = "SELECT sn,dvice_name,pos_terminal FROM dvice WHERE dvice_name LIKE 'BITEL IC3600%' AND office_name = '$office_name';
 ";
 $result = mysqli_query($conn, $query_all_in_it);
 $row_count = mysqli_num_rows($result);

@@ -1,10 +1,10 @@
 /* start data table other  */
 
-// function get_users_v200t_table() {
+// function get_users_bitel_table() {
 var groupColumn = 6;
-var v200t_users_office = $("#v200t_users_office").DataTable({
+var bitel_users_office = $("#bitel_users_office").DataTable({
   ajax: {
-    url: "../api/services_users/v200t/v200t_users_office.php",
+    url: "../api/services_users/bitel/bitel_users_office.php",
     method: "post",
     data: {
       input_office_search: function () {
@@ -21,8 +21,8 @@ var v200t_users_office = $("#v200t_users_office").DataTable({
     { data: "sn" },
     { data: "pos_terminal" },
     { data: "stuff_name" },
-    { data: "sn" },
-    { data: "pos_terminal" },
+    { data: "id" },
+    { data: "auth" },
     {
       data: "stuff_action",
       render: function (data, type, row) {

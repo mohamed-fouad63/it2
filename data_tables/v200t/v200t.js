@@ -15,6 +15,7 @@ var v200t = $("#v200t").DataTable({
   columns: [
     { data: "office_name" },
     { data: "money_code" },
+    { data: "dvice_name" },
     { data: "sn" },
     { data: "pos_terminal" },
     { data: "pos_merchant" },

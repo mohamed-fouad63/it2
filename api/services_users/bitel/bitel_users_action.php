@@ -5,7 +5,7 @@ if (!empty($_POST)) {
   include_once "../../../conn/conn.php";
   $office_name = $_POST['office_name'];
   $money_code = $_POST['money_code'];
-  $v200t_terminal = $_POST['v200t_terminal'];
+  $bitel_terminal = $_POST['bitel_terminal'];
   $dvice_name = $_POST['dvice_name'];
   $sn = $_POST['sn'];
   $stuff_name = $_POST['stuff_name'];
@@ -15,38 +15,38 @@ if (!empty($_POST)) {
 
   $query_terminal = mysqli_query($conn, '
 SELECT
-COUNT(CASE WHEN pos_terminal = "' . $v200t_terminal . '" AND stuff_action <> "removing" AND auth = "موظف"  THEN 1 ELSE NULL END) AS count_this_pos_stuffs ,
+COUNT(CASE WHEN pos_terminal = "' . $bitel_terminal . '" AND stuff_action <> "removing" AND auth = "موظف"  THEN 1 ELSE NULL END) AS count_this_pos_stuffs ,
 COUNT(CASE WHEN money_code = "' . $money_code . '" AND stuff_name = "' . $stuff_name . '" AND stuff_action <> "removing" AND auth = "موظف"  THEN 1 ELSE NULL END) AS count_auth_this_pos_stuff_in_this_office ,
 COUNT(CASE WHEN money_code = "' . $money_code . '" AND stuff_name = "' . $stuff_name . '" AND stuff_action <> "removing" AND auth = "مدير"  THEN 1 ELSE NULL END) AS count_auth_this_pos_manager_in_this_office ,
 COUNT(CASE WHEN money_code = "' . $money_code . '" AND stuff_action <> "removing" AND auth = "مدير + موظف"  THEN 1 ELSE NULL END) AS count_auth_pos_stuff_manager_in_this_office ,
 COUNT(CASE WHEN money_code = "' . $money_code . '" AND stuff_name <> "' . $stuff_name . '" AND stuff_action <> "removing" AND auth = "مدير"  THEN 1 ELSE NULL END) AS count_auth_pos_manager_in_this_office ,
-COUNT(CASE WHEN pos_terminal = "' . $v200t_terminal . '" AND stuff_action <> "removing" AND auth = "مدير"  THEN 1 ELSE NULL END) AS count_this_pos_manager ,
-COUNT(CASE WHEN pos_terminal = "' . $v200t_terminal . '" AND stuff_action <> "removing" AND auth = "مدير + موظف"  THEN 1 ELSE NULL END) AS count_this_pos_stuff_manager ,
-COUNT(CASE WHEN pos_terminal = "' . $v200t_terminal . '" AND stuff_name = "' . $stuff_name . '"  THEN 1 ELSE NULL END)  AS count_this_stuff_in_this_pos
-FROM v200t_users ');
+COUNT(CASE WHEN pos_terminal = "' . $bitel_terminal . '" AND stuff_action <> "removing" AND auth = "مدير"  THEN 1 ELSE NULL END) AS count_this_pos_manager ,
+COUNT(CASE WHEN pos_terminal = "' . $bitel_terminal . '" AND stuff_action <> "removing" AND auth = "مدير + موظف"  THEN 1 ELSE NULL END) AS count_this_pos_stuff_manager ,
+COUNT(CASE WHEN pos_terminal = "' . $bitel_terminal . '" AND stuff_name = "' . $stuff_name . '"  THEN 1 ELSE NULL END)  AS count_this_stuff_in_this_pos
+FROM bitel_users ');
   $adding_stuff = "
-INSERT INTO `v200t_users`
+INSERT INTO `bitel_users`
 (`stuff_name`, `id`, `auth`, `money_code`, `office_name`,`dvice_name`, `sn`, `pos_terminal`, `stuff_action`)
 VALUES
-('$stuff_name','$stuff_id','$stuff_auth','$money_code','$office_name','$dvice_name','$sn','$v200t_terminal','adding')
+('$stuff_name','$stuff_id','$stuff_auth','$money_code','$office_name','$dvice_name','$sn','$bitel_terminal','adding')
 ";
   $removing_stuff = "
-UPDATE `v200t_users` SET
+UPDATE `bitel_users` SET
 `stuff_action`='removing'
 WHERE
-pos_terminal = '$v200t_terminal' AND stuff_name = '$stuff_name'
+pos_terminal = '$bitel_terminal' AND stuff_name = '$stuff_name'
 ";
   $resetting_stuff = "
-UPDATE `v200t_users` SET
+UPDATE `bitel_users` SET
 `stuff_action`='resetting'
 WHERE
-pos_terminal = '$v200t_terminal' AND stuff_name = '$stuff_name'
+pos_terminal = '$bitel_terminal' AND stuff_name = '$stuff_name'
 ";
   $editting_post_terminal = "
-UPDATE `v200t_users` SET
+UPDATE `bitel_users` SET
 `pos_action`='editting'
 WHERE
-pos_terminal = '$v200t_terminal'
+pos_terminal = '$bitel_terminal'
 ";
   while ($row = mysqli_fetch_assoc($query_terminal)) {
     $count_this_stuff_in_this_pos = $row['count_this_stuff_in_this_pos']; //عدد نفس المستخدم على نفس الماكينه

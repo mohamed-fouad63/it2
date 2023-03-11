@@ -19,6 +19,7 @@ var options = {
   list: {
     maxNumberOfElements: 10,
     onClickEvent: function () {
+      bitel_users_office.ajax.reload(function () {});
       v200t_users_office.ajax.reload(function () {});
     },
   },

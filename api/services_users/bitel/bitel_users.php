@@ -5,7 +5,7 @@ $db = $_SESSION['db'];
 include_once "../../../conn/conn.php";
 $input_search = $_POST['input_search'];
 // $input_search = "محمد فؤاد عبدالفتاح عثمان";
-$query_v200t_users = "SELECT * FROM `v200t_users` WHERE stuff_name = '" . $input_search . "' AND stuff_name <> '' ";
+$query_v200t_users = "SELECT * FROM `bitel_users` WHERE stuff_name = '" . $input_search . "' AND stuff_name <> '' ";
 $query_names = "SELECT * FROM `stuff_names` WHERE stuff_name = '" . $input_search . "' ";
 $result_v200t_users = mysqli_query($conn, $query_v200t_users);
 $result_names = mysqli_query($conn, $query_names);
@@ -20,12 +20,11 @@ if ($row_count > 0) {
         $GLOBALS['id'] = $row_v200t_users['id'];
         $stuff_action = $row_v200t_users['stuff_action'];
         $dvice_name = $row_v200t_users['dvice_name'];
-        if ($dvice_name == 'VERIFONE V200T PURCHASES') {
+        if ($dvice_name == 'BITEL IC3600 PURCHASES') {
             $purchases_pos = 'purchases_pos';
         } else {
             $purchases_pos = '';
         }
-
         switch ($stuff_action) {
             case 'adding':
                 $addint_btn = "bg-primary";
@@ -63,7 +62,7 @@ if ($row_count > 0) {
             'money_code' => $row_v200t_users['money_code'],
             'pos_terminal' => '
                     <select class="form-select ' . $purchases_pos . '">
-                        <option data-v200t_type="' . $row_v200t_users['dvice_name'] . '">' . $row_v200t_users['pos_terminal'] . '</option>
+                        <option data-bitel_type="' . $row_v200t_users['dvice_name'] . '">' . $row_v200t_users['pos_terminal'] . '</option>
                     </select>
                 ',
             'sn' => $row_v200t_users['sn'],
@@ -91,7 +90,7 @@ if ($row_count > 0) {
                     </select>',
         'money_code' => $m,
         'pos_terminal' => '
-                    <select class="form-select select_v200t_terminal">
+                    <select class="form-select select_bitel_terminal">
                         <option></option>
                     </select>
                 ',
@@ -125,7 +124,7 @@ if ($row_count > 0) {
                     </select>',
             'money_code' => '',
             'pos_terminal' => '
-                <select class="form-select select_v200t_terminal">
+                <select class="form-select select_bitel_terminal">
                 </select>
                 ',
             'sn' => '',

@@ -24,7 +24,7 @@ session_login_auth('all_misin');
         .dataTables_wrapper .dataTables_filter,
         .dataTables_wrapper .dt-buttons,
         table thead #filterboxrow {
-            /* display: none */
+            display: none
         }
 
         .form-control {
@@ -119,6 +119,7 @@ session_login_auth('all_misin');
                         <tr id="filterboxrow">
                             <th></th>
                             <th>الكود المالى</th>
+                            <th>موديل الماكينه</th>
                             <th>سريال الماكينه</th>
                             <th>pos_terminal</th>
                             <th>pos_merchant</th>
@@ -128,6 +129,7 @@ session_login_auth('all_misin');
                         <tr id="controlPanel">
                             <th>اسم المكتب</th>
                             <th>الكود المالى</th>
+                            <th>موديل الماكينه</th>
                             <th>سريال الماكينه</th>
                             <th>pos_terminal</th>
                             <th>pos_merchant</th>

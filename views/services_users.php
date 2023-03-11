@@ -86,6 +86,11 @@ session_login_auth('all_misin');
         .easy-autocomplete {
             width: auto !important;
         }
+
+        .purchases_pos {
+            color: red;
+            border-color: red;
+        }
     </style>
 </head>
 
@@ -149,7 +154,7 @@ session_login_auth('all_misin');
                         </fieldset>
                         <!-- end pc -->
                         <!-- srart monitor -->
-                        <fieldset class="mb-3">
+                        <!-- <fieldset class="mb-3">
                             <legend>
                                 <span class="count me-2"></span>الحوالات و التحصيل
 
@@ -167,14 +172,14 @@ session_login_auth('all_misin');
                                     </tr>
                                 </thead>
                             </table>
-                        </fieldset>
+                        </fieldset> -->
                         <!-- end montor -->
                         <!-- start printer -->
                         <fieldset class="mb-3">
                             <legend>
                                 <span class="count me-2"></span>pos Bitel
                             </legend>
-                            <table class="table align-middle table-hover" style="width:100%">
+                            <table id="bitel" class="table align-middle table-hover" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>اسم المكتب</th>
@@ -212,20 +217,20 @@ session_login_auth('all_misin');
                             </table>
                         </fieldset>
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item col-4" role="presentation">
+                            <li class="nav-item col-6" role="presentation">
                                 <button class="nav-link w-100  active" data-bs-toggle="pill"
                                     data-bs-target="#v200t_report" type="button" role="tab" aria-selected="true">تقرير
                                     مستخدمين V200T</button>
                             </li>
-                            <li class="nav-item col-4" role="presentation">
+                            <li class="nav-item col-6" role="presentation">
                                 <button class="nav-link w-100 " data-bs-toggle="pill" data-bs-target="#bitel_report"
                                     type="button" role="tab" aria-selected="false">تقرير مستخدمين بايتل</button>
                             </li>
-                            <li class="nav-item col-4" role="presentation">
+                            <!-- <li class="nav-item col-4" role="presentation">
                                 <button class="nav-link w-100 " data-bs-toggle="pill" data-bs-target="#hewalat_report"
                                     type="button" role="tab" aria-selected="false">تقرير مستخدمين الحولاات و
                                     التحصيل</button>
-                            </li>
+                            </li> -->
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="v200t_report" role="tabpanel">
@@ -233,7 +238,7 @@ session_login_auth('all_misin');
                                     <table id="v200t_users_report" class="table align-middle table-hover"
                                         style="width:100%">
                                         <thead>
-                                            <tr id="filterboxrow">
+                                            <tr id="v200t_filterboxrow">
                                                 <th>اسم المكتب</th>
                                                 <th>كود مالى</th>
                                                 <th>رقم الماكينه</th>
@@ -257,8 +262,34 @@ session_login_auth('all_misin');
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="bitel_report" role="tabpanel">bitel report</div>
-                            <div class="tab-pane fade" id="hewalat_report" role="tabpanel">hewalat report</div>
+                            <div class="tab-pane fade" id="bitel_report" role="tabpanel">
+                                <table id="bitel_users_report" class="table align-middle table-hover"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr id="bitel_filterboxrow">
+                                            <th>اسم المكتب</th>
+                                            <th>كود مالى</th>
+                                            <th>رقم الماكينه</th>
+                                            <th>S.N</th>
+                                            <th>صلاحية </th>
+                                            <th>رقم الملف</th>
+                                            <th>اضافه - الغاء</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <th>اسم المكتب</th>
+                                            <th>كود مالى</th>
+                                            <th>رقم الماكينه</th>
+                                            <th>S.N</th>
+                                            <th>صلاحية</th>
+                                            <th>رقم الملف</th>
+                                            <th>اضافه - الغاء</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="hewalat_report" role="tabpanel">hewalat report</div> -->
                         </div>
                     </div>
                     <div class="tab-pane fade" id="users_office_auth" role="tabpanel"
@@ -288,7 +319,7 @@ session_login_auth('all_misin');
                         </fieldset>
                         <!-- end pc -->
                         <!-- srart monitor -->
-                        <fieldset class="mb-3">
+                        <!-- <fieldset class="mb-3">
                             <legend>
                                 <span class="count me-2"></span>الحوالات و التحصيل
 
@@ -306,24 +337,26 @@ session_login_auth('all_misin');
                                     </tr>
                                 </thead>
                             </table>
-                        </fieldset>
+                        </fieldset> -->
                         <!-- end montor -->
                         <!-- start printer -->
                         <fieldset class="mb-3">
                             <legend>
                                 <span class="count me-2"></span>pos Bitel
                             </legend>
-                            <table class="table align-middle table-hover" style="width:100%">
+                            <table id="bitel_users_office" class="table align-middle table-hover" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>اسم المكتب</th>
-                                        <th>الكود المالى</th>
-                                        <th>رقم الماكينه</th>
-                                        <th>s / n</th>
-                                        <th>الاسم رباعى</th>
-                                        <th>صلاحيه</th>
-                                        <th>رقم الملف</th>
-                                        <th>الاجراء</th>
+                                        <th>office_name</th>
+                                        <th>money_code</th>
+                                        <th>sn</th>
+                                        <th>pos_terminal</th>
+                                        <th>stuff_name</th>
+                                        <th>id</th>
+                                        <th>auth</th>
+                                        <th>stuff_action</th>
+                                        <th>pos_action</th>
+                                        <th>action_date</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -337,13 +370,13 @@ session_login_auth('all_misin');
                             <table id="v200t_users_office" class="table align-middle table-hover" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>office_name</th>
+                                        <th>money_code</th>
+                                        <th>sn</th>
+                                        <th>pos_terminal</th>
                                         <th>stuff_name</th>
                                         <th>id</th>
                                         <th>auth</th>
-                                        <th>money_code</th>
-                                        <th>office_name</th>
-                                        <th>sn</th>
-                                        <th>pos_terminal</th>
                                         <th>stuff_action</th>
                                         <th>pos_action</th>
                                         <th>action_date</th>
@@ -379,9 +412,15 @@ session_login_auth('all_misin');
     <script src="../js/tbl_user/services_users_search_live.js"></script>
     <script src="../js/tbl_user/services_users_search_office.js"></script>
     <script src="../js/log/change_password.js"></script>
+
     <script src="../data_tables/services_users/v200t/user_services_auth.js"></script>
     <script src="../data_tables/services_users/v200t/user_services_office.js"></script>
     <script src="../data_tables/services_users/v200t/v200t_users_report.js"></script>
+
+    <script src="../data_tables/services_users/bitel/user_services_auth.js"></script>
+    <script src="../data_tables/services_users/bitel/bitel_users_report.js"></script>
+    <script src="../data_tables/services_users/bitel/user_services_office.js"></script>
+
     <script></script>
 </body>
 

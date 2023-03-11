@@ -20,6 +20,7 @@ var options = {
     maxNumberOfElements: 10,
     onClickEvent: function () {
       v200t.ajax.reload(function () {});
+      bitel.ajax.reload(function () {});
       // get_users_v200t_table();
     },
   },
