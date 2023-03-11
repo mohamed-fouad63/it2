@@ -17,13 +17,13 @@ $("#Edit_Pos_Modal .btn-success").click(function () {
             formData.money_code) {
             $.ajax({
               type: "POST",
-              url: "../api/pos/edit_v200t.php",
+              url: "../api/pos/edit_bitel.php",
               data: formData,
               success: function (result) {
                 result = result.replace(/^\s+|\s+$/gm, "");
                 if (result == "done") {
                   $("#Edit_Pos_Modal").modal("hide");
-                  v200t.ajax.reload();
+                  bitel.ajax.reload();
                 } else {
                   alert(result);
                 }

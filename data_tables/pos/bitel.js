@@ -1,10 +1,10 @@
 /* start data table other  */
 
-// function get_users_v200t_table() {
+// function get_users_bitel_table() {
 
-var v200t = $("#v200t").DataTable({
+var bitel = $("#bitel").DataTable({
   ajax: {
-    url: "../api/dvice/v200t.php",
+    url: "../api/dvice/bitel.php",
     method: "post",
     data: function (d) {
       d.auth = "";
@@ -40,18 +40,19 @@ var v200t = $("#v200t").DataTable({
     infoEmpty: "0",
     info: "_TOTAL_",
   },
-  rowCallback: function (row, data) {},
-  fnDrawCallback: function () {},
+  rowCallback: function (row, data) { },
+  fnDrawCallback: function () { },
   initComplete: function () {
-    $("#v200t tbody").on("click", ".btn-success", function () {
-      var data_v200t = v200t.row($(this).parents("tr")).data();
-      $("#office_name").val(data_v200t.office_name);
-      $("#money_code").val(data_v200t.money_code);
-      $("#pos_sn").val(data_v200t.sn);
-      $("#pos_sn").data("pos_sn", data_v200t.sn);
-      $("#pos_terminal").val(data_v200t.pos_terminal);
-      $("#pos_merchant").val(data_v200t.pos_merchant);
-      $("#stuff_pos").val(data_v200t.stuff_pos);
+    $("#bitel tbody").on("click", ".btn-success", function () {
+      var data_bitel = bitel.row($(this).parents("tr")).data();
+      $("#office_name").val(data_bitel.office_name);
+      $("#money_code").val(data_bitel.money_code);
+      $("#money_code").data("money_code", data_bitel.money_code);
+      $("#pos_sn").val(data_bitel.sn);
+      $("#pos_sn").data("pos_sn", data_bitel.sn);
+      $("#pos_terminal").val(data_bitel.pos_terminal);
+      $("#pos_merchant").val(data_bitel.pos_merchant);
+      $("#stuff_pos").val(data_bitel.stuff_pos);
       // return (dvice_num = data_pc.count_in_it);
     });
     this.api()
@@ -82,14 +83,14 @@ var v200t = $("#v200t").DataTable({
           function () {
             $(this).html(
               '<input type="search" id="input' +
-                $(this).index() +
-                '" placeholder="بحث بـ ' +
-                $(this).text() +
-                '"/>'
+              $(this).index() +
+              '" placeholder="بحث بـ ' +
+              $(this).text() +
+              '"/>'
             );
             $(this).on("keyup change", function () {
               var val = $("#input" + $(this).index()).val();
-              v200t.column($(this).index()).search(val).draw();
+              bitel.column($(this).index()).search(val).draw();
             });
           }
         );

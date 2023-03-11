@@ -114,7 +114,7 @@ session_login_auth('all_misin');
     <div class="pcoded-main-container">
         <div class="pcoded-content">
             <div id="main">
-                <table id="v200t" class="table table-hover" style="width:100%">
+                <table id="bitel" class="table table-hover" style="width:100%">
                     <thead id="tablehead">
                         <tr id="filterboxrow">
                             <th></th>
@@ -145,7 +145,7 @@ session_login_auth('all_misin');
         <!-- end user exit modal -->
         <!-- start user password  modal -->
         <?php include '../component/modals/user_password_change.php' ?>
-        <?php include '../component/modals/pos/edit_v200t_modal.php' ?>
+        <?php include '../component/modals/pos/edit_bitel_modal.php' ?>
         <!-- end user password modal -->
     </div>
 
@@ -155,8 +155,8 @@ session_login_auth('all_misin');
     <script src="../assets/js/pcoded.min2.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/DataTables/jquery.dataTables.js"></script>
-    <script src="../data_tables/pos/v200t.js"></script>
-    <script src="../js/pos/edit_v200t.js"></script>
+    <script src="../data_tables/pos/bitel.js"></script>
+    <script src="../js/pos/edit_bitel.js"></script>
     <script src="../js/log/change_password.js"></script>
 </body>
 
