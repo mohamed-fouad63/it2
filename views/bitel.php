@@ -7,7 +7,7 @@ session_login_auth('all_misin');
 
 <head>
     <meta charset=utf-8>
-    <title>ماموريات تحت الانتظار</title>
+    <title>اداره POS BITEL</title>
     <link rel="icon" href="../../../it2/assets/images/it1.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/plugins/bootstrap5/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../assets/DataTables/DataTables-1.12.1/css/dataTables.bootstrap5.css">
