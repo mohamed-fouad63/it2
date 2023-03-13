@@ -54,6 +54,7 @@ var table = $("#repair_dvices").DataTable({
       text: '<i class="btn btn-warning bi bi-printer" title="طباعه"></i>',
     },
   ],
+  autoFill: false,
   language: {
     zeroRecords: "",
     infoEmpty: "0 / ",
@@ -67,11 +68,9 @@ var table = $("#repair_dvices").DataTable({
         var column = this;
         $("thead tr#filterboxrow th").each(function () {
           $(this).html(
-            '<input type="search" id="input' +
-              $(this).index() +
-              '" placeholder="بحث بـ ' +
-              $(this).text() +
-              '"/>'
+            '<input type="search" id="input" placeholder="بحث بـ ' +
+            $(this).text() +
+            '"/>'
           );
           $(this).on("keyup change", function () {
             var val = $("#input" + $(this).index()).val();

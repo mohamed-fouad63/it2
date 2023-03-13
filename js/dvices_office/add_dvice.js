@@ -20,8 +20,8 @@ $("#id_dvice_type").change(function () {
   var options_select_dvice_name = "<option></option>";
   $.getJSON(
     "../api/dvice/dvice_name_dvice_type.php?id_dvice_type=" +
-      id_dvice_type +
-      "",
+    id_dvice_type +
+    "",
     function (data) {
       $.each(data, function (key, val) {
         options_select_dvice_name +=
@@ -45,8 +45,8 @@ $("#select_dvice_name").change(function () {
   select_dvice_name = $(this).val();
   $.getJSON(
     "../api/dvice/dvice_type_dvice_type.php?dvice_name=" +
-      select_dvice_name +
-      "",
+    select_dvice_name +
+    "",
     function (data) {
       $.each(data, function (key, val) {
         $("#divce_type").val(val.dvice_type);

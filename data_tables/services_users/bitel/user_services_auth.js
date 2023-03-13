@@ -31,7 +31,7 @@ var bitel = $("#bitel").DataTable({
     infoEmpty: "0",
     info: "_TOTAL_",
   },
-  rowCallback: function (row, data) {},
+  rowCallback: function (row, data) { },
   fnDrawCallback: function () {
     office_name = $("#bitel tbody tr:last")
       .find("td:eq(0)")
@@ -71,7 +71,7 @@ function get_bitel_terminal(office_name) {
     function (data) {
       $.each(data, function (key, val) {
         options_select_it_name2 +=
-          "<option data-bitel_type='"+val.dvice_name+"' value='" + val.sn + "'>" + val.pos_terminal + "</option>";
+          "<option data-bitel_type='" + val.dvice_name + "' value='" + val.sn + "'>" + val.pos_terminal + "</option>";
       });
       $(".select_bitel_terminal").html(options_select_it_name2);
     },
@@ -101,7 +101,7 @@ function change_select_office2() {
 function change_bitel_terminal() {
   $("#bitel tbody tr td").on("change", ".select_bitel_terminal", function () {
     bitel_type = $(this).find(':selected').data('bitel_type');
-    if(bitel_type == 'BITEL IC3600 PURCHASES'){
+    if (bitel_type == 'BITEL IC3600 PURCHASES') {
       $(this).addClass('purchases_pos')
     } else {
       $(this).removeClass('purchases_pos')

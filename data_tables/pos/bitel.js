@@ -40,7 +40,32 @@ var bitel = $("#bitel").DataTable({
     infoEmpty: "0",
     info: "_TOTAL_",
   },
-  rowCallback: function (row, data) { },
+  rowCallback: function (row, data) {
+    if (data.money_code == '0') {
+      $('td:eq(1)', row).addClass('text-danger');
+    }
+    if (data.pos_terminal == '0') {
+      $('td:eq(4)', row).addClass('text-danger');
+    }
+    if (data.pos_merchant == '0') {
+      $('td:eq(5)', row).addClass('text-danger');
+    }
+    if (data.pos_terminal.length != data.money_code.length + 3) {
+      $('td:eq(4)', row).css('color', 'green');
+    }
+    if (data.pos_merchant.length != data.money_code.length + 2) {
+      $('td:eq(5)', row).css('color', 'green');
+    }
+    if (data.pos_terminal.slice(0, data.money_code.length) != data.money_code) {
+      $('td:eq(4)', row).addClass('text-primary');
+    }
+    if (data.pos_merchant.slice(0, data.money_code.length) != data.money_code) {
+      $('td:eq(5)', row).addClass('text-primary');
+    }
+    if (data.stuff_pos == 0) {
+      $('td:eq(6)', row).addClass('text-danger');
+    }
+  },
   fnDrawCallback: function () { },
   initComplete: function () {
     $("#bitel tbody").on("click", ".btn-success", function () {

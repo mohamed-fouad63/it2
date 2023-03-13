@@ -6,11 +6,14 @@ include_once "../../../conn/conn.php";
 $input_search = $_POST['input_search'];
 // $input_search = "محمد فؤاد عبدالفتاح عثمان";
 $query_v200t_users = "SELECT * FROM `bitel_users` WHERE stuff_name = '" . $input_search . "' AND stuff_name <> '' ";
+$query_v200t_users_removing = "SELECT * FROM `bitel_users` WHERE stuff_name = '" . $input_search . "' AND stuff_action <> 'removing' AND stuff_name <> '' ";
 $query_names = "SELECT * FROM `stuff_names` WHERE stuff_name = '" . $input_search . "' ";
 $result_v200t_users = mysqli_query($conn, $query_v200t_users);
-$result_names = mysqli_query($conn, $query_names);
 $row_count = mysqli_num_rows($result_v200t_users);
+$result_names = mysqli_query($conn, $query_names);
+$result_v200t_users_removing = mysqli_query($conn, $query_v200t_users_removing);
 $row_count_names = mysqli_num_rows($result_names);
+$row_count_users_removing = mysqli_num_rows($result_v200t_users_removing);
 
 if ($row_count > 0) {
     while ($row_v200t_users = mysqli_fetch_assoc($result_v200t_users)) {
@@ -54,6 +57,7 @@ if ($row_count > 0) {
                 <option value="resetting">استعاده كلمه المرور</option>';
                 break;
         }
+
         $row_read_dvice_json[] = array(
             'office_name' => '
                     <select class="form-select">
@@ -80,13 +84,18 @@ if ($row_count > 0) {
                 ',
             'do_action' => $do_action_element,
         );
-
     }
     ;
+    if ($row_count_users_removing == 0) {
+        $select_office = 'select_office';
+        $GLOBALS['m'] = '';
+    } else {
+        $select_office = '';
+    }
     $row_read_dvice_json[] = array(
         'office_name' => '
-                    <select class="form-select">
-                        <option selected value=' . $m . '>' . $z . '</option>
+                    <select class="form-select ' . $select_office . '">
+                        <option value=' . $m . '>' . $z . '</option>
                     </select>',
         'money_code' => $m,
         'pos_terminal' => '
@@ -115,6 +124,7 @@ if ($row_count > 0) {
                 <button type="button" class="btn btn-success">تقديم الطلب</button>
                 ',
     );
+
     echo json_encode($row_read_dvice_json, JSON_UNESCAPED_UNICODE);
 } elseif ($row_count_names == 1) {
     while ($row_names = mysqli_fetch_assoc($result_names)) {
